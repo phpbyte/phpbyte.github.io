@@ -1,5 +1,5 @@
 async function postData(url = "", data = {}) {
-   return await fetch(url, {
+   const result = await fetch(url, {
     method: "POST", 
     mode: "cors",
     cache: "no-cache", 
@@ -8,9 +8,9 @@ async function postData(url = "", data = {}) {
     },
     redirect: "follow",
     referrerPolicy: "no-referrer",
-    body: data
-  })
+    body: JSON.stringify(data)
+  }); return result.json()
 }
 postData("https://riza.us/ask.php",{answer:7}).then((data) => {
-  console.log(data.json());
+  console.log(data);
 });
