@@ -9,7 +9,7 @@ async function postData(url = "", data = {}) {
     redirect: "follow",
     referrerPolicy: "no-referrer",
     body: JSON.stringify(data)
-  }); return result
+  }); return result.json()
 }
 postData("https://riza.us/ask.php",{answer:7}).then((data) => {
   console.log(data);
