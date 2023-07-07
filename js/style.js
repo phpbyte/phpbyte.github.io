@@ -12,5 +12,5 @@ async function postData(url = "", data = {}) {
   })
 }
 postData("https://riza.us/ask.php",{answer:7}).then((data) => {
-  console.log(data);
+  console.log(data.json());
 });
