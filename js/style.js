@@ -1,1 +1,1 @@
-cosole.log('this is phpbyte')
+console.log('this is phpbyte')
